@@ -13,10 +13,10 @@ public class Zombie_Graphics : MonoBehaviour
     {
         if(aiPath.desiredVelocity.x >= 0.01f)
         {
-            transform.localScale = new Vector3(-1f, 1f, 1f);
+            transform.localScale = new Vector3(-0.4308391f, 0.4308391f, 0.8616782f);
         } else if (aiPath.desiredVelocity.x <= -0.01f)
         {
-            transform.localScale = new Vector3(1f, 1f, 1f);
+            transform.localScale = new Vector3(0.4308391f, 0.4308391f, 0.8616782f);
         }
     }
 }
