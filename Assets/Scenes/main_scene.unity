@@ -1773,7 +1773,7 @@ MonoBehaviour:
   - name: 'Wave 1 '
     enemy: {fileID: 1742569738}
     count: 1
-    rate: 1
+    rate: 10
   - name: Wave 2
     enemy: {fileID: 1742569738}
     count: 1
