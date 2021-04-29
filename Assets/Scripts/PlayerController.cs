@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
+    public Rigidbody2D myRigidbody;
     public float moveSpeed;
 
     private Animator anim;
@@ -12,6 +12,9 @@ public class PlayerController : MonoBehaviour
     private bool playerMoving;
     private Vector2 lastMove;
 
+    private bool attacking;
+    public float attackTime;
+    private float attackTimeCounter;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +42,14 @@ public class PlayerController : MonoBehaviour
             playerMoving = true;
             lastMove = new Vector2(0f, Input.GetAxisRaw("Vertical"));
 
+        }
+
+        if(Input.GetKeyDown(KeyCode.J))
+        {
+            attackTimeCounter = attackTime;
+            attacking = true;
+            myRigidbody.velocity = Vector2.zero;
+            anim.SetBool("Attack", true);
         }
 
         anim.SetFloat("Move X", Input.GetAxisRaw("Horizontal"));
