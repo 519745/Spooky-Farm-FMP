@@ -16,8 +16,6 @@ public class PlayerController : MonoBehaviour
     public float attackTime;
     private float attackTimeCounter;
 
-    public GameObject Enemy2;
-
     // Start is called before the first frame update
     void Start()
     {

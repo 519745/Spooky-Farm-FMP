@@ -17,11 +17,16 @@ public class HurtEnemy : MonoBehaviour
 
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+
+    void OnCollisionEnter2D(Collision2D Collider2D)
     {
-        if (other.gameObject.tag == "Enemy")
+        if (Collider2D.gameObject.tag == "Enemy")
         {
-            Destroy(other.gameObject);
+            Debug.Log("hit");
+            Destroy(Collider2D.gameObject);
         }
     }
+    
+        
 }
+

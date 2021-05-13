@@ -126,7 +126,7 @@ public class WaveSpawner : MonoBehaviour {
         Transform _sp = spawnPoints[ Random.Range(0, spawnPoints.Length) ];
         Instantiate(_enemy, _sp.position, _sp.rotation);
 
-        GameObject Enemy = GameObject.Find("Enemy");
+        GameObject Enemy = GameObject.Find("Enemy(Clone)");
         Enemy.transform.GetChild(0).gameObject.SetActive(false);
 
     }
