@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     public float attackTime;
     private float attackTimeCounter;
 
+    private ShakeBehaviour shakeData;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -81,6 +83,15 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("PlayerMoving", playerMoving);
         anim.SetFloat("LastMove X", lastMove.x);
         anim.SetFloat("LastMove Y", lastMove.y);
-
     }
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.name == "Enemy")
+        {
+            //ShakeBehaviour.shakeDuration = 1;
+            shakeData = GameObject.Find("Main Camera").GetComponent<ShakeBehaviour>();
+            shakeData.shakeDuration = 1;
+        }
+    }
+
 }

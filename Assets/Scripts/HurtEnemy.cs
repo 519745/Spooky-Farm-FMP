@@ -7,7 +7,7 @@ public class HurtEnemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -16,17 +16,5 @@ public class HurtEnemy : MonoBehaviour
 
 
     }
-
-
-    void OnCollisionEnter2D(Collision2D Collider2D)
-    {
-        if (Collider2D.gameObject.tag == "Enemy")
-        {
-            Debug.Log("hit");
-            Destroy(Collider2D.gameObject);
-        }
-    }
-    
-        
 }
 
